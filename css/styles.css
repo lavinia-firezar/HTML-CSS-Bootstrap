@@ -1,0 +1,120 @@
+:root {
+    --bg-primary:#ADD8E6;
+    --bg-secondary:#f5f5dc;
+    --text-color:#808080;
+    --fs-large:2.813rem;
+    --fs-medium:1.563rem;
+    --spacing-medium:1rem;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin:0;
+    padding:0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.background {
+    height:50vh;
+    width:auto;
+    background-image: url("https://romtur.ro/content/uploads/2020/11/seaside-WD77MEU-768x576.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.about-me .content {
+    height:50vh;
+    background-color: var(--bg-primary);
+    padding:var(--spacing-medium) 40px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.content {
+    font-size: var(--fs-medium);
+    color:var(--text-color);
+}
+
+.content a {
+    font-size:var(--fs-medium);
+    text-decoration: none;
+    color:var(--bg-secondary);
+}
+
+.content a:hover {
+    color:var(--text-color);
+}
+
+.projects {
+    background-color: var(--bg-secondary);
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+}
+
+.projects h2 {
+    font-size: var(--fs-large);
+    color:var(--bg-primary);
+    padding-top: 15px;
+    text-align:center;   
+}
+
+.projects-container {
+    display:flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;     
+}
+
+.project {
+    width:100%;
+    min-height:300px;
+    border: 1px solid var(--bg-primary);
+    border-radius:var(--spacing-medium);
+    background-color: var(--bg-primary);   
+}
+
+.project-wrapper {
+    width:25%;
+    padding: var(--spacing-medium);   
+}
+
+.project a {
+    font-size: var(--fs-large);
+    display:flex;
+    justify-content: center;
+    margin-top: 90px;
+    color:var(--bg-secondary);
+    text-decoration: none;
+}
+
+.project a:hover {
+    color:var(--text-color);
+}
+
+@media (max-width:922px) {
+    .project-wrapper {
+        width:50%;
+    }
+}
+
+@media (max-width:768px) {
+    .project-wrapper {
+        width:100%;
+        margin:var(--spacing-medium);
+    }
+
+    .content {
+        font-size:20px;
+    }
+}
